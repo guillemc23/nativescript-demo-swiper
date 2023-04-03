@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.m-icon-round {
+  font-family: 'Material Icons', 'MaterialIconsRound-Regular';
+  font-weight: 100;
+  font-size: 36;
+}
+
+.box-shadow {
+  box-shadow: 0px -15px 14px 0px rgba(25, 33, 40, 0.75);
+}

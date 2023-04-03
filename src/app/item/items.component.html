@@ -1,0 +1,20 @@
+<ActionBar title="My App"> </ActionBar>
+<StackLayout>
+<BottomSheet [steps]="[120, 512]" width="100%">
+    <ScrollView width="100%" height="100%">
+        <StackLayout width="100%">
+            <StackLayout height="250" class="bg-red-100"></StackLayout>
+        <GridLayout height="550" rows="*,120" class="bg-red-900" width="100%">
+          <swipeable-cards [dataCard]="dataCard" row="0"></swipeable-cards>
+        </GridLayout>
+            <StackLayout height="250" class="bg-red-300"></StackLayout>
+            <StackLayout height="250" class="bg-red-500"></StackLayout>
+            <StackLayout height="250" class="bg-red-700"></StackLayout>
+            <StackLayout height="250" class="bg-red-800"></StackLayout>
+        </StackLayout>
+    </ScrollView>
+    <GridLayout bottomSheet backgroundColor="green" height="512" width="100%">
+      <Label text="This is the side drawer content"></Label>
+    </GridLayout>
+</BottomSheet>
+</StackLayout>

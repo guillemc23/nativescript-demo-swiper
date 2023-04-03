@@ -1,0 +1,43 @@
+<GridLayout rows="*, 150" height="100%">
+  <GridLayout class="100%">
+    <GestureRootView>
+      <GridLayout *ngFor="let card of cards$; let i = index">
+        <Image
+          stretch="aspectFill"
+          height="120"
+          width="90%"
+          class="rounded-lg mt-20"
+          [src]="card.img"
+          [translateY]="getTranslateY(i)"
+          (loaded)="loadedCard($event, i)"
+        >
+      </Image>
+      <!-- <label row="1" [text]="card.title"></label> -->
+      </GridLayout>
+    </GestureRootView>
+  </GridLayout>
+
+  <FlexboxLayout row="1" class="justify-around items-center">
+    <Button
+      (tap)="discard()"
+      class="h-[80] w-[80]"
+      icon="close"
+      backgroundColor="red"
+    >
+    </Button>
+    <Button
+      (tap)="resetAllCard()"
+      class="h-[80] w-[80]"
+      icon="close"
+      backgroundColor="yellow"
+    >
+    </Button>
+    <Button
+      (tap)="like()"
+      class="h-[80] w-[80]"
+      icon="favorite"
+      backgroundColor="green"
+    >
+    </Button>
+  </FlexboxLayout>
+</GridLayout>
